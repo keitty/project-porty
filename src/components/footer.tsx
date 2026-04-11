@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <nav>
+    <footer>
       <h2>Project Porti Footer</h2>
-    </nav>
+    </footer>
   )
 }
 
