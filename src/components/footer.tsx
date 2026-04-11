@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="bg-lime-600 text-black p-4">
-      <h2>Project Porty @2026</h2>
+    <footer className="bg-lime-600 text-black p-4 text-center">
+      <p>© 2026 Project Porty. All rights reserved.</p>
     </footer>
   )
 }
