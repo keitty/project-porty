@@ -21,6 +21,10 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           <li><a href="#projects" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Projects</a></li>
           <li><Link to="/blog" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Blog</Link></li>
           <li><a href="#contact" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Contact</a></li>
+          <li><a href="#wclock" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">World Clock</a></li>
+          <li><a href="#weather" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Weather</a></li>
+          <li><a href="#currency" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Currency</a></li>
+
           <li>
             <button
               onClick={() => setDarkMode(!darkMode)}
@@ -56,10 +60,14 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           <li><a href="#projects" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Projects</a></li>
           <li><Link to="/blog" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Blog</Link></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Contact</a></li>
+          <li><a href="#wclock" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">World Clock</a></li>
+          <li><a href="#weather" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Weather</a></li>
+          <li><a href="#currency" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Currency</a></li>
         </ul>
       )}
     </nav>
   )
 }
+
 
 export default Navbar

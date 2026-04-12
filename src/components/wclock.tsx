@@ -40,7 +40,7 @@ function WorldClock() {
   }, [])
 
   return (
-    <section id="worldclock" className="p-16 dark:bg-gray-800">
+    <section id="wclock" className="p-16 dark:bg-gray-800">
       <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">🌍 World Clock</h2>
       {loading ? (
         <p className="text-center text-gray-500 dark:text-gray-400">Loading times...</p>
