@@ -17,7 +17,7 @@ function Hero() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="text-lg md:text-xl lg:text-2xl text-gray-500 dark:text-gray-300 mt-2"
       >
-        Front-End Developer & Solution Engineer
+        Front-End Developer & Solutions Engineer
       </motion.p>
       <motion.button
         initial={{ opacity: 0, y: 30 }}

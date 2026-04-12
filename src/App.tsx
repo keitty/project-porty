@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import Home from './pages/home'
-import Blog from './pages/blog'
+import { useState, useEffect, lazy, Suspense } from 'react'
+
+const Home = lazy(() => import('./pages/home'))
+const Blog = lazy(() => import('./pages/blog'))
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -16,10 +17,12 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />} />
-        <Route path="/blog" element={<Blog darkMode={darkMode} setDarkMode={setDarkMode} />} />
-      </Routes>
+      <Suspense fallback={<div className="p-16 text-center">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />} />
+          <Route path="/blog" element={<Blog darkMode={darkMode} setDarkMode={setDarkMode} />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }
