@@ -37,19 +37,19 @@ function WorldClock() {
   }, [])
 
   return (
-    <section id="worldclock" className="p-16">
-      <h2 className="text-3xl font-bold text-center mb-8">🌍 World Clock</h2>
+    <section id="worldclock" className="p-16 dark:bg-gray-800">
+      <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">🌍 World Clock</h2>
       {loading ? (
-        <p className="text-center text-gray-500">Loading times...</p>
+        <p className="text-center text-gray-500 dark:text-gray-400">Loading times...</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {TIMEZONES.map(tz => (
-            <div key={tz.zone} className="border border-lime-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow">
+            <div key={tz.zone} className="border border-lime-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600">
               <p className="text-4xl mb-2">{tz.flag}</p>
-              <h3 className="font-bold text-lg">{tz.label}</h3>
-              <p className="text-3xl font-bold text-lime-600 mt-2">{times[tz.zone]?.time}</p>
-              <p className="text-gray-500 text-sm mt-1">{times[tz.zone]?.dayOfWeek}</p>
-              <p className="text-gray-400 text-xs mt-1">{times[tz.zone]?.date}</p>
+              <h3 className="font-bold text-lg dark:text-white">{tz.label}</h3>
+              <p className="text-3xl font-bold text-lime-600 dark:text-lime-400 mt-2">{times[tz.zone]?.time}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{times[tz.zone]?.dayOfWeek}</p>
+              <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">{times[tz.zone]?.date}</p>
             </div>
           ))}
         </div>

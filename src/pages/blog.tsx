@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 
+interface BlogProps {
+  darkMode: boolean
+  setDarkMode: (value: boolean) => void
+}
+
 interface Article {
   id: number
   title: string
@@ -12,7 +17,7 @@ interface Article {
   positive_reactions_count: number
 }
 
-function Blog() {
+function Blog({ darkMode, setDarkMode }: BlogProps) {
   const [articles, setArticles] = useState<Article[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -27,7 +32,7 @@ function Blog() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <section className="p-16">
         <h2 className="text-3xl font-bold text-center mb-2">Blog</h2>
         <p className="text-gray-500 text-center mb-8">Latest articles from the React community</p>

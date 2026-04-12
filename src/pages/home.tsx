@@ -5,15 +5,19 @@ import Projects from '../components/projects'
 import WorldClock from '../components/wclock'
 import Contact from '../components/contact'
 import Footer from '../components/footer'
+interface HomeProps {
+  darkMode: boolean
+  setDarkMode: (value: boolean) => void
+}
 
-function Home() {
+function Home({ darkMode, setDarkMode }: HomeProps) {
   return (
     <div>
-      <Navbar />
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
-      <WorldClock />
       <Experience />
       <Projects />
+      <WorldClock />
       <Contact />
       <Footer />
     </div>
