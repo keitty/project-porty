@@ -80,7 +80,7 @@ function Currency() {
         <p className="text-center text-red-500">{error}</p>
       ) : (
         <>
-          {/* Rate Cards — 1 USD = X */}
+          {/* Rate Cards — 1 BRL = X */}
           <div className="flex justify-center gap-6">
             {DISPLAY_CURRENCIES.map((currency, index) => (
               <motion.div
@@ -108,7 +108,7 @@ function Currency() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="max-w-xl mx-auto border border-lime-200 rounded-lg shadow p-8 dark:bg-gray-700 dark:border-gray-600"
+            className="max-w-xl mx-auto border border-lime-200 rounded-lg shadow p-8 dark:bg-gray-700 dark:border-gray-600 m-16"
           >
             <h3 className="text-xl font-bold text-center mb-6 dark:text-white">🔄 Converter</h3>
 
@@ -125,41 +125,41 @@ function Currency() {
             </div>
 
             {/* From / Swap / To */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="flex-1">
-                <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">From</label>
-                <select
-                  value={fromCurrency}
-                  onChange={(e) => setFromCurrency(e.target.value)}
-                  className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
-                >
-                  {ALL_CURRENCIES.map((c) => (
-                    <option key={c.code} value={c.code}>{c.code} — {c.label}</option>
-                  ))}
-                </select>
-              </div>
+            <div className="flex flex-col md:flex-row items-center gap-3 mb-6">
+  <div className="w-full md:flex-1">
+    <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">From</label>
+    <select
+      value={fromCurrency}
+      onChange={(e) => setFromCurrency(e.target.value)}
+      className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-3 text-base font-semibold dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
+    >
+      {ALL_CURRENCIES.map((c) => (
+        <option key={c.code} value={c.code}>{c.code} — {c.label}</option>
+      ))}
+    </select>
+  </div>
 
-              {/* Swap Button */}
-              <button
-                onClick={handleSwap}
-                className="mt-5 p-2 rounded-full bg-lime-500 hover:bg-lime-600 text-white font-bold text-lg transition-colors"
-              >
-                ⇄
-              </button>
+  {/* Swap Button */}
+  <button
+    onClick={handleSwap}
+    className="mt-0 md:mt-5 p-3 rounded-full bg-lime-500 hover:bg-lime-600 text-white font-bold text-lg transition-colors"
+  >
+    ⇄
+  </button>
 
-              <div className="flex-1">
-                <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">To</label>
-                <select
-                  value={toCurrency}
-                  onChange={(e) => setToCurrency(e.target.value)}
-                  className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
-                >
-                  {ALL_CURRENCIES.map((c) => (
-                    <option key={c.code} value={c.code}>{c.code} — {c.label}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
+  <div className="w-full md:flex-1">
+    <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">To</label>
+    <select
+      value={toCurrency}
+      onChange={(e) => setToCurrency(e.target.value)}
+      className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-3 text-base font-semibold dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
+    >
+      {ALL_CURRENCIES.map((c) => (
+        <option key={c.code} value={c.code}>{c.code} — {c.label}</option>
+      ))}
+    </select>
+  </div>
+</div>
 
             {/* Result */}
             {converted && (
