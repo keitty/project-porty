@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 interface Repo {
   id: number
   name: string
-  description: string
+  description: string | null
   html_url: string
-  language: string
+  language: string | null
   stargazers_count: number
 }
 
@@ -32,8 +32,13 @@ function Projects() {
           {repos.map(repo => (
             <div key={repo.id} className="border border-lime-200 p-6 rounded-lg shadow hover:shadow-md transition-shadow">
               <h3 className="font-bold text-xl">{repo.name}</h3>
-              <p className="text-gray-500 text-sm mt-1">{repo.language}</p>
-              <p className="mt-2 text-gray-600">{repo.description}</p>
+              <p className="text-gray-500 text-sm mt-1">
+                    {repo.language ? repo.language : "No language detected"}
+              </p>
+              <p className="mt-2 text-gray-600">
+                {repo.description ? repo.description : "No description available"}
+              </p>
+              <p className="text-lg font-bold text-lime-600 mt-4">⭐ {repo.stargazers_count}</p>
               <a href={repo.html_url} className="text-lime-600 font-medium mt-4 inline-block hover:text-lime-700">View Project →</a>
             </div>
           ))}
