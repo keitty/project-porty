@@ -36,6 +36,17 @@ function Hero() {
         >
           Front-End & Solutions Engineer
         </motion.p>
+        {/* Under construction banner */}
+  <motion.div
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.1 }}
+    className="mb-4 mt-6 px-4 py-2 bg-lime-100 dark:bg-gray-700 border border-lime-400 dark:border-lime-600 rounded-full text-sm font-medium text-lime-700 dark:text-lime-400 flex items-center gap-2"
+  >
+    <span className="w-2 h-2 bg-lime-500 rounded-full animate-pulse inline-block"></span>
+    🚧 Still under construction — more to come!
+  </motion.div>
+
         {/*
         <motion.button
           initial={{ opacity: 0, y: 30 }}

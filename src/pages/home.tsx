@@ -14,7 +14,7 @@ interface HomeProps {
 
 function Home({ darkMode, setDarkMode }: HomeProps) {
   return (
-    <div>
+    <div className="pt-16">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
       <Experience />
