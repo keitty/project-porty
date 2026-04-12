@@ -36,6 +36,7 @@ function Hero() {
         >
           Front-End & Solutions Engineer
         </motion.p>
+        {/*
         <motion.button
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,7 +44,7 @@ function Hero() {
           className="mt-6 bg-lime-500 text-white px-6 py-3 rounded-full font-bold hover:bg-lime-600 dark:bg-lime-600 dark:hover:bg-lime-700"
         >
           View My Work
-        </motion.button>
+        </motion.button> */}
       </div>
 
     </section>

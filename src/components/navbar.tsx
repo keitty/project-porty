@@ -12,7 +12,7 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   return (
     <nav className="bg-lime-300 dark:bg-gray-900 text-black dark:text-white p-4">
       <div className="flex justify-between items-center">
-        <Link to="/" className="font-bold text-xl">Project Porty</Link>
+        <Link to="/" className="font-bold text-xl">project porty</Link>
         
         {/* Desktop menu */}
         <ul className="hidden md:flex gap-6 items-center">

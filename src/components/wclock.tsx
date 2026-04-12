@@ -11,11 +11,11 @@ interface TimeData {
 
 //Each item in the array is an object representing a city-specific clock entry.
 const TIMEZONES = [
-  { label: "Mendoza", zone: "America/Argentina/Mendoza", flag: "🇦🇷" },
-  { label: "New York", zone: "America/New_York", flag: "🇺🇸" },
-  { label: "London", zone: "Europe/London", flag: "🇬🇧" },
-  { label: "Tokyo", zone: "Asia/Tokyo", flag: "🇯🇵" },
-  { label: "Sydney", zone: "Australia/Sydney", flag: "🇦🇺" },
+  { label: "São Paulo",    country: "Brazil",         zone: "America/Sao_Paulo" },
+  { label: "New York",     country: "United States",  zone: "America/New_York" },
+  { label: "Chicago",      country: "United States",  zone: "America/Chicago" },
+  { label: "Mexico City",  country: "Mexico",         zone: "America/Mexico_City" },
+  { label: "San Francisco",country: "United States",  zone: "America/Los_Angeles" },
 ]
 
 function WorldClock() {
@@ -48,19 +48,19 @@ function WorldClock() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {TIMEZONES.map((tz, index) => (
             <motion.div
-              key={tz.zone}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="border border-lime-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
-            >
-              <p className="text-4xl mb-2">{tz.flag}</p>
-              <h3 className="font-bold text-lg dark:text-white">{tz.label}</h3>
-              <p className="text-3xl font-bold text-lime-600 dark:text-lime-400 mt-2">{times[tz.zone]?.time}</p>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{times[tz.zone]?.dayOfWeek}</p>
-              <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">{times[tz.zone]?.date}</p>
-            </motion.div>
+  key={tz.zone}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: index * 0.1 }}
+  viewport={{ once: true }}
+  className="border border-lime-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
+>
+  <h3 className="font-bold text-lg dark:text-white">{tz.label}</h3>
+  <p className="text-sm text-gray-400 dark:text-gray-500">{tz.country}</p>
+  <p className="text-3xl font-bold text-lime-600 dark:text-lime-400 mt-2">{times[tz.zone]?.time}</p>
+  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{times[tz.zone]?.dayOfWeek}</p>
+  <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">{times[tz.zone]?.date}</p>
+</motion.div>
           ))}
         </div>
       )}
