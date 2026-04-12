@@ -7,7 +7,7 @@ function Experience() {
       <div className="flex flex-col gap-6">
         {[
           {
-            title: "Solution Engineer",
+            title: "Solutions Engineer",
             company: "@Adyen",
             period: "Apr-2022 - Mar-2026",
             description: "Drove the technical success of 100+ global projects as a REST API and Unified Platforms expert, slashing time-to-market by 50% through high-level pre-sales consulting. Architected complex B2B/Tier 1 integrations for POS and SaaS while delivering high-impact demos and documentation to accelerate merchant launches."

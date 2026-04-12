@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
+//it describes the shape of an object that holds four string values
 interface TimeData {
   time: string
   date: string
@@ -8,6 +9,7 @@ interface TimeData {
   timeZone: string
 }
 
+//Each item in the array is an object representing a city-specific clock entry.
 const TIMEZONES = [
   { label: "Mendoza", zone: "America/Argentina/Mendoza", flag: "🇦🇷" },
   { label: "New York", zone: "America/New_York", flag: "🇺🇸" },
