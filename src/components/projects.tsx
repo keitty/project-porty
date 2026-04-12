@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 interface Repo {
   id: number
@@ -29,14 +30,21 @@ function Projects() {
         <p className="text-center text-gray-500 dark:text-gray-400">Loading projects...</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {repos.map(repo => (
-            <div key={repo.id} className="border border-lime-200 p-6 rounded-lg shadow hover:shadow-md transition-shadow dark:bg-gray-800 dark:border-gray-600">
+          {repos.map((repo, index) => (
+            <motion.div
+              key={repo.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="border border-lime-200 p-6 rounded-lg shadow hover:shadow-md transition-shadow dark:bg-gray-800 dark:border-gray-600"
+            >
               <h3 className="font-bold text-xl dark:text-white">{repo.name}</h3>
               <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{repo.language ? repo.language : "No language detected"}</p>
               <p className="mt-2 text-gray-600 dark:text-gray-300">{repo.description ? repo.description : "No description available"}</p>
               <p className="text-lg font-bold text-lime-600 dark:text-lime-400 mt-4">⭐ {repo.stargazers_count}</p>
               <a href={repo.html_url} className="text-lime-600 dark:text-lime-400 font-medium mt-4 inline-block hover:text-lime-700">View Project →</a>
-            </div>
+            </motion.div>
           ))}
         </div>
       )}
