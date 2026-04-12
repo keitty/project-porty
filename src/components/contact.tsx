@@ -6,6 +6,7 @@ function Contact() {
       <div className="flex gap-4">
         <a href="mailto:keitty.prevedel@gmail.com" className="bg-lime-500 text-white px-6 py-3 rounded-full font-bold hover:bg-lime-600 dark:bg-lime-600 dark:hover:bg-lime-700">Email Me</a>
         <a href="https://github.com/keitty" className="border border-lime-500 text-lime-600 px-6 py-3 rounded-full font-bold hover:bg-lime-50 dark:text-lime-400 dark:border-lime-400 dark:hover:bg-gray-700">GitHub</a>
+        <a href="https://www.linkedin.com/in/keitty-prevedel" className="border border-lime-500 text-lime-600 px-6 py-3 rounded-full font-bold hover:bg-lime-50 dark:text-lime-400 dark:border-lime-400 dark:hover:bg-gray-700">Linkedin</a>
       </div>
     </section>
   )
