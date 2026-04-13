@@ -1,7 +1,6 @@
-import { VercelRequest, VercelResponse } from '@vercel/node'
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
-export default function handler(req: VercelRequest, res: VercelResponse) {
-  // Allow requests from anywhere
+export default function handler(_req: VercelRequest, res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET')
   res.setHeader('Content-Type', 'application/json')
@@ -10,82 +9,91 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     meta: {
       version: "1.0.0",
       last_updated: "2026",
-      url: "https://your-portfolio.vercel.app/api/resume"
+      url: "https://project-porty.vercel.app/api/resume"
     },
     personal: {
-      name: "Keitty",
-      title: "Front-End & Solutions Engineer",
+      name: "Keitty Vilela Prevedel",
+      title: "Integration Specialist & Front-End Engineer",
       email: "keitty.prevedel@gmail.com",
-      location: "São Paulo, Brasil",
-      github: "https://github.com/keitty",
+      location: "São Paulo, Brazil (GMT-3)",
+      phone: "+55 11 92102-7443",
       linkedin: "https://linkedin.com/in/keitty-prevedel",
       portfolio: "https://project-porty.vercel.app"
     },
-    summary: "Front-End & Solutions Engineer passionate about building modern web applications with React, TypeScript and API integrations.",
+    summary: "Integration Specialist with over 12 years of experience in the tech industry, including 7 years specializing in integrations. Expertise in SaaS and financial products with proven experience working with APIs, JSON, SDKs, JavaScript, and both server- and client-side web.",
+    languages: [
+      { language: "Portuguese", level: "Native" },
+      { language: "English", level: "Fluent" },
+      { language: "Spanish", level: "Proficient" }
+    ],
     skills: {
-      languages: ["JavaScript", "TypeScript", "HTML", "CSS"],
-      frameworks: ["React", "Node.js"],
-      tools: ["Git", "GitHub", "Vite", "Tailwind CSS", "Framer Motion"],
-      apis: ["REST APIs", "GitHub API", "Open-Meteo", "Open Exchange Rates"]
+      technical: ["RESTful APIs", "Webhooks", "JSON", "SOAP", "SQL", "NoSQL", "JavaScript", "Front-End", "Payments Integration"],
+      platforms: ["Postman", "GitHub/Git", "VS Code", "Google Cloud", "Jira", "Salesforce", "Zendesk", "Adyen", "Stripe", "PayPal", "HubSpot", "Grafana"],
+      project_management: ["Agile", "Scrum", "Scope & Risk Management", "Quality Assurance", "Technical Documentation"],
+      soft_skills: ["Remote Work", "Global Stakeholder Management", "Technical Consulting", "Cross-functional Leadership", "Customer Centricity", "Pre-sale Consulting"]
     },
     experience: [
       {
         company: "Adyen",
-        role: "Solutions Engineer",
-        period: "April 2022 — March 2026",
-        location: "São Paulo, Brasil",
-        description: "Drove the technical success of 100+ global projects as a REST API and Unified Platforms expert, slashing time-to-market by 50% through high-level pre-sales consulting. Architected complex B2B/Tier 1 integrations for POS and SaaS while delivering high-impact demos and documentation to accelerate merchant launches.",
-        technologies: ["JavaScript", "RESTFul API", "Remote Troubleshooting", "Technical Consulting", "Pre-Sales Support", "B2B Integrations", "SaaS Solutions", "Demo Creation", "Technical Documentation", "Merchant Enablement"]
+        role: "Implementation Engineer AMER",
+        period: "Apr 2022 – Mar 2026",
+        duration: "4 years",
+        highlights: [
+          "Provided high-level pre-sales consulting for prospective global merchants.",
+          "Launched 100+ global and local projects, reducing time-to-market by ~50%.",
+          "Served as REST API expert maintaining high-standard documentation.",
+          "Guided B2B and Tier 1 retailers through complex POS and digital integrations.",
+          "Built demos for Sales and Customer presentations."
+        ]
       },
-
       {
         company: "Adyen",
-        role: "Technical Support Engineer",
-        period: "June 2019 — April 2022",
-        location: "São Paulo, Brasil",
-        description: "Provided advanced L2/L3 technical support and troubleshooting for POS and digital systems, resolving 100+ daily tickets and managing complex financial and API integrations. Served as a dedicated CSM for Netflix and Meta, collaborating with global teams to optimize service delivery and streamline large-scale data reconciliation.",
-        technologies: ["JavaScript", "RESTFul API", "Remote Troubleshooting", "Technical Consulting", "Pre-Sales Support", "B2B Integrations", "SaaS Solutions", "Demo Creation", "Technical Documentation", "Merchant Enablement", "Financial Reconciliation", "Data Analysis", "Customer Success Management"]
+        role: "Technical Support Engineer LATAM",
+        period: "Jul 2019 – Apr 2022",
+        duration: "2 years 10 months",
+        highlights: [
+          "Delivered advanced technical troubleshooting for POS and Digital systems.",
+          "Dedicated CSM for Netflix and Meta.",
+          "Resolved 100+ tickets and 20+ calls per day as L2/L3 Support Engineer.",
+          "Managed complex merchant issues related to financial reconciliation and APIs."
+        ]
       },
-
       {
         company: "SaaSTec",
         role: "Product Support Manager",
-        period: "January 2016 — December 2018",
-        location: "Curitiba, Brasil",
-        description: "Led a team of three support engineers to maintain a 90% CSAT while managing L2/L3 escalations and streamlining dev-to-support communication. Leveraged advanced SQL querying for data analysis to resolve complex technical issues and drive continuous product and service delivery improvements.",
-        technologies: ["SQL", "Technical Support Management", "Customer Satisfaction", "L2/L3 Escalation Management", "Team Leadership", "Data Analysis", "Dev-to-Support Communication", "Product Improvement"]
+        period: "Jan 2016 – Dec 2018",
+        duration: "3 years",
+        highlights: [
+          "Managed a team of 3 Support Engineers with 80-90% CSAT score.",
+          "Assisted customers in complex L2/L3 situations.",
+          "SQL querying for advanced analysis and reporting.",
+          "Facilitated communication between development and support teams."
+        ]
       }
     ],
     education: [
-
       {
-        institution: "Univesidade do Norte do Parana",
-        degree: "MBA - Project Management",
-        period: "2019 — 2019",
-        location: "Curitiba, Brasil"
+        institution: "Universidade Norte do Paraná",
+        degree: "MBA in Project Management",
+        year: "2019"
       },
-
       {
         institution: "Universidade Positivo",
-        degree: "Analysis and Systems Development",
-        period: "2010 — 2014",
-        location: "Curitiba, Brasil"
+        degree: "B.S. in Systems Analysis and Development",
+        year: "2017"
       }
     ],
-    projects: [
-      {
-        name: "Project Porty",
-        description: "Personal portfolio with live API integrations including Weather, World Clock and Currency Converter.",
-        technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        url: "https://project-porty.vercel.app",
-        github: "https://github.com/keitty/project-porty"
-      }
+    certifications: [
+      { name: "Front-End Engineer", issuer: "Codecademy", year: "2026", status: "In Progress" },
+      { name: "Spanish Course", year: "2026", status: "In Progress" },
+      { name: "Generative AI: Prompt Engineering Basics", issuer: "IBM", year: "2025", status: "Completed" },
+      { name: "Scrum Fundamentals Certified (SFC)", year: "2020", status: "Completed" },
+      { name: "Professional Customer Service (PCS)", year: "2019", status: "Completed" }
     ],
-    languages: [
-      { language: "Spanish", level: "Professional - On Course 2026" },
-      { language: "English", level: "Fluent" },
-      { language: "Portuguese", level: "Native" }
-    ]
+    availability: {
+      type: "Remote",
+      timezones: ["LATAM GMT-3 to GMT-6", "US East Coast (ET)", "US West Coast (PT)", "Western European (GMT+0)", "Central European (GMT+1)"]
+    }
   }
 
   return res.status(200).json(resume)

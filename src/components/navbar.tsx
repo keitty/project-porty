@@ -23,6 +23,7 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           <li><a href="/#wclock" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">clock</a></li>
           <li><a href="/#weather" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">weather</a></li>
           <li><a href="/#currency" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">currency</a></li>
+          <li><a href="/#resume" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">resume</a></li>
           <li><a href="/#contact" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">contact</a></li>
 
           <li>
@@ -62,6 +63,7 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           <li><a href="/#wclock" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">clock</a></li>
           <li><a href="/#weather" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">weather</a></li>
           <li><a href="/#currency" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">currency</a></li>
+          <li><a href="/#resume" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">resume</a></li>
           <li><a href="/#contact" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">contact</a></li>
         </ul>
       )}

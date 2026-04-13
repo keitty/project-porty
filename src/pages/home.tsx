@@ -7,6 +7,7 @@ import Contact from '../components/contact'
 import Footer from '../components/footer'
 import Weather from '../components/weather'
 import Currency from '../components/currency'
+import ResumeAPI from '../components/resumeapi'
 interface HomeProps {
   darkMode: boolean
   setDarkMode: (value: boolean) => void
@@ -22,6 +23,7 @@ function Home({ darkMode, setDarkMode }: HomeProps) {
       <WorldClock />
       <Weather />
       <Currency />
+      <ResumeAPI />
       <Contact />
       <Footer />
     </div>

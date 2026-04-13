@@ -54,10 +54,12 @@ function Weather() {
   const [weatherData, setWeatherData] = useState<Record<string, WeatherData>>({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [locationReady, setLocationReady] = useState(false)
 
   // Step 1: Get user location on mount
   useEffect(() => {
     if (!navigator.geolocation) {
+      setLocationReady(true)
       return
     }
 
@@ -65,7 +67,6 @@ function Weather() {
       async (position) => {
         const { latitude, longitude } = position.coords
         try {
-          // Reverse geocode to get city name
           const res = await fetch(
             `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
           )
@@ -77,23 +78,24 @@ function Weather() {
             geo.address.county ||
             'Your Location'
 
-          const userCity: CityEntry = { label: cityName, lat: latitude, lon: longitude }
-          setCities([userCity, SAO_PAULO])
+          setCities([{ label: cityName, lat: latitude, lon: longitude }, SAO_PAULO])
         } catch {
-          // If reverse geocode fails, still use coords with generic label
           setCities([{ label: 'Your Location', lat: latitude, lon: longitude }, SAO_PAULO])
+        } finally {
+          setLocationReady(true)
         }
       },
       () => {
-        // If user denies location, fallback to just São Paulo
         setCities([SAO_PAULO])
-      }
+        setLocationReady(true)
+      },
+      { timeout: 5000 } // don't wait more than 5 seconds for location
     )
   }, [])
 
-  // Step 2: Fetch weather whenever cities change
+  // Step 2: Only fetch weather AFTER location is resolved
   useEffect(() => {
-    if (cities.length === 0) return
+    if (!locationReady) return
 
     const fetchAll = async () => {
       try {
@@ -112,7 +114,7 @@ function Weather() {
     fetchAll()
     const interval = setInterval(fetchAll, 600000)
     return () => clearInterval(interval)
-  }, [cities])
+  }, [locationReady]) // only depends on locationReady, not cities
 
   return (
     <section id="weather" className="p-16 dark:bg-gray-800">
