@@ -12,19 +12,19 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-lime-300 dark:bg-gray-900 text-black dark:text-white p-4">
       <div className="flex justify-between items-center">
-        <Link to="/" className="font-bold text-xl">project porty</Link>
+        <Link to="/" className="font-bold text-xl">Home</Link>
         
         {/* Desktop menu */}
         <ul className="hidden md:flex gap-6 items-center">
-          <li><Link to="/" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">home</Link></li>
-          <li><a href="/#projects" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">projects</a></li>
-          <li><Link to="/blog" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">blog</Link></li>
-          <li><a href="/#wclock" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">clock</a></li>
+          {/*<li><Link to="/" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">home</Link></li>*/}
+          <li><a href="/#projects" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Git Projects</a></li>
+          <li><Link to="/blog" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Blog</Link></li>
+          <li><a href="/#wclock" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Clock</a></li>
           {/*<li><a href="/#weather" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">weather</a></li>*/}
-          <li><a href="/#currency" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">currency</a></li>
-          <li><a href="/#reviews" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">AI automation</a></li>
-          <li><a href="/#resume" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">resume</a></li>
-          <li><a href="/#contact" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">contact</a></li>
+          <li><a href="/#currency" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Currency</a></li>
+          <li><a href="/#reviews" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">AI Automation</a></li>
+          <li><a href="/#resume" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Resume</a></li>
+          <li><a href="/#contact" className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Contact</a></li>
 
           <li>
             <button
@@ -56,15 +56,15 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
       {/* Mobile dropdown */}
       {menuOpen && (
         <ul className="md:hidden flex flex-col gap-4 mt-4 pb-2">
-          <li><Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">home</Link></li>
-          <li><a href="/#projects" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">projects</a></li>
-          <li><Link to="/blog" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">blog</Link></li>
-          <li><a href="/#wclock" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">clock</a></li>
+         {/*  <li><Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">home</Link></li> */}
+          <li><a href="/#projects" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Git Projects</a></li>
+          <li><Link to="/blog" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Blog</Link></li>
+          <li><a href="/#wclock" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Clock</a></li>
           {/*<li><a href="/#weather" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">weather</a></li>*/}
-          <li><a href="/#currency" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">currency</a></li>
-          <li><a href="/#reviews" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">AI automation</a></li>
-          <li><a href="/#resume" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">resume</a></li>
-         <li><a href="/#contact" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">contact</a></li>
+          <li><a href="/#currency" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Currency</a></li>
+          <li><a href="/#reviews" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">AI Automation</a></li>
+          <li><a href="/#resume" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Resume</a></li>
+         <li><a href="/#contact" onClick={() => setMenuOpen(false)} className="hover:text-lime-700 dark:hover:text-lime-400 font-medium">Contact</a></li>
         </ul>
       )}
     </nav>

@@ -122,7 +122,7 @@ function Reviews() {
               />
             </div>
 
-            {/* Email */}
+            {/* Email 
             <div className="mb-4">
               <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
                 Email <span className="text-gray-400 text-xs">(optional)</span>
@@ -134,7 +134,7 @@ function Reviews() {
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
               />
-            </div>
+            </div> */}
 
             {/* Review */}
             <div className="mb-6">
@@ -168,6 +168,18 @@ function Reviews() {
           </>
         )}
       </motion.div>
+      <p className="mt-6 text-center text-sm text-gray-600 dark:text-gray-400">
+        Click{' '}
+        <a
+          href="https://docs.google.com/spreadsheets/d/1nWlonAGKcED9wXeMK-U7lQIFtspvJNjiFWkNAR50qTQ/edit?usp=drive_link"
+          className="text-lime-500 hover:text-lime-600 underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>{' '}
+        to check the submitted reviews!
+      </p>
     </section>
   )
 }
