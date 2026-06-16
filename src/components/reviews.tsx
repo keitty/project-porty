@@ -53,8 +53,8 @@ function Reviews() {
 
       {/* Flow explanation badge */}
       <div className="flex justify-center mb-8">
-        <div className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-lime-400 text-xs font-mono rounded-full">
-          <span className="w-2 h-2 bg-lime-500 rounded-full animate-pulse"></span>
+        <div className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-blue-400 text-xs font-mono rounded-full">
+          <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
           Your Review → Make.com → GPT-4o mini → Google Sheets
         </div>
       </div>
@@ -73,10 +73,10 @@ function Reviews() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="border border-lime-200 dark:border-gray-600 rounded-lg p-4 text-center dark:bg-gray-700 shadow"
+            className="border border-blue-200 dark:border-gray-600 rounded-lg p-4 text-center dark:bg-gray-700 shadow"
           >
             <p className="text-3xl mb-1">{item.emoji}</p>
-            <p className="text-xs font-bold text-lime-600 dark:text-lime-400 mb-1">Step {item.step}</p>
+            <p className="text-xs font-bold text-blue-600 dark:text-blue-400 mb-1">Step {item.step}</p>
             <p className="text-xs text-gray-500 dark:text-gray-400">{item.label}</p>
           </motion.div>
         ))}
@@ -88,7 +88,7 @@ function Reviews() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
-        className="max-w-xl mx-auto border border-lime-200 dark:border-gray-600 rounded-lg shadow p-8 dark:bg-gray-700"
+        className="max-w-xl mx-auto border border-blue-200 dark:border-gray-600 rounded-lg shadow p-8 dark:bg-gray-700"
       >
         {success ? (
           <div className="text-center py-8">
@@ -99,7 +99,7 @@ function Reviews() {
             </p>
             <button
               onClick={() => setSuccess(false)}
-              className="bg-lime-500 hover:bg-lime-600 text-white px-6 py-2 rounded-full font-bold text-sm transition-colors"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-bold text-sm transition-colors"
             >
               Submit Another
             </button>
@@ -118,7 +118,7 @@ function Reviews() {
                 placeholder="Your name"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
+                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -132,7 +132,7 @@ function Reviews() {
                 placeholder="your@email.com"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
+                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div> */}
 
@@ -146,7 +146,7 @@ function Reviews() {
                 value={form.review}
                 onChange={(e) => setForm({ ...form, review: e.target.value })}
                 rows={4}
-                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500 resize-none"
+                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
               />
             </div>
 
@@ -157,7 +157,7 @@ function Reviews() {
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="w-full bg-lime-500 hover:bg-lime-600 disabled:bg-lime-300 text-white py-3 rounded-full font-bold transition-colors"
+              className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-300 text-white py-3 rounded-full font-bold transition-colors"
             >
               {loading ? '⏳ Sending...' : '🚀 Submit Review'}
             </button>
@@ -172,7 +172,7 @@ function Reviews() {
         Click{' '}
         <a
           href="https://docs.google.com/spreadsheets/d/1nWlonAGKcED9wXeMK-U7lQIFtspvJNjiFWkNAR50qTQ/edit?usp=drive_link"
-          className="text-lime-500 hover:text-lime-600 underline"
+          className="text-blue-500 hover:text-blue-600 underline"
           target="_blank"
           rel="noopener noreferrer"
         >

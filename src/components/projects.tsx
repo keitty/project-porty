@@ -37,13 +37,13 @@ function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="border border-lime-200 p-6 rounded-lg shadow hover:shadow-md transition-shadow dark:bg-gray-800 dark:border-gray-600"
+              className="border border-blue-200 p-6 rounded-lg shadow hover:shadow-md transition-shadow dark:bg-gray-800 dark:border-gray-600"
             >
               <h3 className="font-bold text-xl dark:text-white">{repo.name}</h3>
               <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{repo.language ? repo.language : "No language detected"}</p>
               <p className="mt-2 text-gray-600 dark:text-gray-300">{repo.description ? repo.description : "No description available"}</p>
-              <p className="text-lg font-bold text-lime-600 dark:text-lime-400 mt-4">⭐ {repo.stargazers_count}</p>
-              <a href={repo.html_url} className="text-lime-600 dark:text-lime-400 font-medium mt-4 inline-block hover:text-lime-700">View Project →</a>
+              <p className="text-lg font-bold text-blue-600 dark:text-blue-400 mt-4">⭐ {repo.stargazers_count}</p>
+              <a href={repo.html_url} className="text-blue-600 dark:text-blue-400 font-medium mt-4 inline-block hover:text-blue-700">View Project →</a>
             </motion.div>
           ))}
         </div>

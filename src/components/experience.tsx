@@ -31,10 +31,10 @@ function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="border border-lime-200 p-6 rounded-lg shadow hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
+            className="border border-blue-200 p-6 rounded-lg shadow hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
           >
             <h3 className="font-bold text-xl dark:text-white">{job.title}</h3>
-            <p className="text-lime-600 font-medium dark:text-lime-400">{job.company}</p>
+            <p className="text-blue-600 font-medium dark:text-blue-400">{job.company}</p>
             <p className="text-gray-500 dark:text-gray-400 text-sm">{job.period}</p>
             <p className="mt-2 dark:text-gray-300">{job.description}</p>
           </motion.div>

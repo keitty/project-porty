@@ -89,12 +89,12 @@ function Currency() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="border border-lime-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
+                className="border border-blue-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
               >
                 
                 <h3 className="font-bold text-lg dark:text-white">{currency.code}</h3>
                 <p className="text-sm text-gray-400 dark:text-gray-500 mb-2">{currency.label}</p>
-                <p className="text-2xl font-bold text-lime-600 dark:text-lime-400">
+                <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                   {rates[currency.code]?.toFixed(2)}
                 </p>
                 <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">per 1 BRL</p>
@@ -108,7 +108,7 @@ function Currency() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="max-w-xl mx-auto border border-lime-200 rounded-lg shadow p-8 dark:bg-gray-700 dark:border-gray-600 m-16"
+            className="max-w-xl mx-auto border border-blue-200 rounded-lg shadow p-8 dark:bg-gray-700 dark:border-gray-600 m-16"
           >
             <h3 className="text-xl font-bold text-center mb-6 dark:text-white">🔄 Converter</h3>
 
@@ -120,7 +120,7 @@ function Currency() {
                 min="0"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-lg font-bold dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
+                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-lg font-bold dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -131,7 +131,7 @@ function Currency() {
     <select
       value={fromCurrency}
       onChange={(e) => setFromCurrency(e.target.value)}
-      className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-3 text-base font-semibold dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
+      className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-3 text-base font-semibold dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
       {ALL_CURRENCIES.map((c) => (
         <option key={c.code} value={c.code}>{c.code} — {c.label}</option>
@@ -142,7 +142,7 @@ function Currency() {
   {/* Swap Button */}
   <button
     onClick={handleSwap}
-    className="mt-0 md:mt-5 p-3 rounded-full bg-lime-500 hover:bg-lime-600 text-white font-bold text-lg transition-colors"
+    className="mt-0 md:mt-5 p-3 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg transition-colors"
   >
     ⇄
   </button>
@@ -152,7 +152,7 @@ function Currency() {
     <select
       value={toCurrency}
       onChange={(e) => setToCurrency(e.target.value)}
-      className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-3 text-base font-semibold dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-lime-500"
+      className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-3 text-base font-semibold dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
       {ALL_CURRENCIES.map((c) => (
         <option key={c.code} value={c.code}>{c.code} — {c.label}</option>
@@ -163,11 +163,11 @@ function Currency() {
 
             {/* Result */}
             {converted && (
-              <div className="text-center bg-lime-50 dark:bg-gray-800 rounded-lg p-4">
+              <div className="text-center bg-blue-100 dark:bg-gray-800 rounded-lg p-4">
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   {amount} {fromCurrency} =
                 </p>
-                <p className="text-4xl font-bold text-lime-600 dark:text-lime-400 mt-1">
+                <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mt-1">
                   {converted} {toCurrency}
                 </p>
               </div>

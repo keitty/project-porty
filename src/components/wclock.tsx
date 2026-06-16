@@ -53,11 +53,11 @@ function WorldClock() {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: index * 0.1 }}
   viewport={{ once: true }}
-  className="border border-lime-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
+  className="border border-blue-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
 >
   <h3 className="font-bold text-lg dark:text-white">{tz.label}</h3>
   <p className="text-sm text-gray-400 dark:text-gray-500">{tz.country}</p>
-  <p className="text-3xl font-bold text-lime-600 dark:text-lime-400 mt-2">{times[tz.zone]?.time}</p>
+  <p className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-2">{times[tz.zone]?.time}</p>
   <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{times[tz.zone]?.dayOfWeek}</p>
   <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">{times[tz.zone]?.date}</p>
 </motion.div>

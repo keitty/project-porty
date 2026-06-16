@@ -135,11 +135,11 @@ function Weather() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="border border-lime-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
+                className="border border-blue-200 p-6 rounded-lg shadow text-center hover:shadow-md transition-shadow dark:bg-gray-700 dark:border-gray-600"
               >
                 <h3 className="font-bold text-lg dark:text-white">{city.label}</h3>
                 <p className="text-5xl my-2">{w?.emoji}</p>
-                <p className="text-3xl font-bold text-lime-600 dark:text-lime-400">{w?.temp}°C</p>
+                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">{w?.temp}°C</p>
                 <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 capitalize">{w?.description}</p>
                 <div className="mt-3 text-xs text-gray-400 dark:text-gray-500 space-y-1">
                   <p>💧 Humidity: {w?.humidity}%</p>

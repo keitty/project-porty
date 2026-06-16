@@ -14,7 +14,7 @@ function Hero() {
         <img
           src="/images/roni_yo1.png"
           alt="Keitty - Front-End & Solutions Engineer"
-          className="w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full object-cover shadow-xl border-4 border-lime-500 dark:border-lime-600"
+          className="w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full object-cover shadow-xl border-4 border-blue-500 dark:border-blue-600"
         />
       </motion.div>
 
@@ -41,9 +41,9 @@ function Hero() {
     initial={{ opacity: 0, y: -10 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.1 }}
-    className="mb-4 mt-6 px-4 py-2 bg-lime-100 dark:bg-gray-700 border border-lime-400 dark:border-lime-600 rounded-full text-sm font-medium text-lime-700 dark:text-lime-400 flex items-center gap-2"
+    className="mb-4 mt-6 px-4 py-2 bg-blue-100 dark:bg-gray-700 border border-blue-400 dark:border-blue-600 rounded-full text-sm font-medium text-blue-700 dark:text-blue-400 flex items-center gap-2"
   >
-    <span className="w-2 h-2 bg-lime-500 rounded-full animate-pulse inline-block"></span>
+    <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse inline-block"></span>
     🚧 Still under construction — more to come!
   </motion.div>
 
@@ -52,7 +52,7 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-6 bg-lime-500 text-white px-6 py-3 rounded-full font-bold hover:bg-lime-600 dark:bg-lime-600 dark:hover:bg-lime-700"
+          className="mt-6 bg-blue-500 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700"
         >
           View My Work
         </motion.button> */}
