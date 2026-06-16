@@ -12,7 +12,7 @@ function Hero() {
         className="flex-shrink-0"
       >
         <img
-          src="/images/roni_yo1.png"
+          src="/images/roni.png"
           alt="Keitty - Front-End & Solutions Engineer"
           className="w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full object-cover shadow-xl border-4 border-blue-500 dark:border-blue-600"
         />
